@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om mig – Said Q Ronfli</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ⭐ GLOBAL MENY -->
+<div id="menu-container"></div>
+<script>
+fetch("menu.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("menu-container").innerHTML = data;
+  });
+</script>
+<!-- ⭐ SLUT GLOBAL MENY -->
+
+<h2 class="center">Om mig</h2>
+
+<section class="about-page">
+    <p>
+        Jag heter Said Q Ronfli och är specialist inom marockanskt hantverk, Zellij, mosaik,
+        tadelakt och traditionellt murararbete. Med många års erfarenhet skapar jag exklusiva,
+        hållbara och estetiska lösningar för både hem och företag.
+    </p>
+
+    <p>
+        Mitt arbete kombinerar traditionella tekniker med modern precision. Varje projekt är unikt
+        och utförs med största omsorg och kvalitet.
+    </p>
+
+    <a href="contact.html" class="cta">Kontakta mig</a>
+</section>
+
+<!-- ⭐ JAVASCRIPT -->
+<script src="lightbox.js"></script>
+
+</body>
+</html>

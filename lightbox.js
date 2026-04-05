@@ -1,24 +1,33 @@
+// LIGHTBOX GALLERI
 const galleryImages = document.querySelectorAll('.gallery img');
 
-const lightbox = document.createElement('div');
-lightbox.id = 'lightbox';
-document.body.appendChild(lightbox);
+if (galleryImages.length > 0) {
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    document.body.appendChild(lightbox);
 
-galleryImages.forEach(image => {
-    image.addEventListener('click', () => {
-        lightbox.classList.add('active');
-        const img = document.createElement('img');
-        img.src = image.src;
+    galleryImages.forEach(image => {
+        image.addEventListener('click', () => {
+            lightbox.classList.add('active');
+            const img = document.createElement('img');
+            img.src = image.src;
 
-        while (lightbox.firstChild) {
-            lightbox.removeChild(lightbox.firstChild);
-        }
+            while (lightbox.firstChild) {
+                lightbox.removeChild(lightbox.firstChild);
+            }
 
-        lightbox.appendChild(img);
+            lightbox.appendChild(img);
+        });
     });
-});
 
-lightbox.addEventListener('click', e => {
-    if (e.target !== e.currentTarget) return;
-    lightbox.classList.remove('active');
-});
+    lightbox.addEventListener('click', e => {
+        if (e.target !== e.currentTarget) return;
+        lightbox.classList.remove('active');
+    });
+}
+
+// HAMBURGERMENY
+function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}

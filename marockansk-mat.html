@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marockanska Maträtter – Tajine, Couscous, Mechoui & Lkorain</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="food">
+
+<!-- ⭐ GLOBAL MENY -->
+<div id="menu-container"></div>
+<script>
+fetch("menu.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("menu-container").innerHTML = data;
+  });
+</script>
+<!-- ⭐ SLUT GLOBAL MENY -->
+
+<h2 class="center">Marockanska Maträtter</h2>
+
+<!-- ⭐ GALLERI FÖR MAROCKANSK MAT -->
+<section class="gallery">
+    <div class="grid">
+        <img src="bilder/tajine.jpg" alt="Tajine – marockansk gryta">
+        <img src="bilder/couscous.jpg" alt="Couscous – traditionell fredagsrätt">
+        <img src="bilder/mechoui.jpg" alt="Mechoui – långsamt grillat lamm">
+        <img src="bilder/harira.jpg" alt="Harira – marockansk soppa">
+        <img src="bilder/pastilla.jpg" alt="Pastilla – söt och salt kycklingpaj">
+        <img src="bilder/minttea.jpg" alt="Marockanskt mintte">
+    </div>
+</section>
+<!-- ⭐ SLUT GALLERI -->
+
+<section class="services-page">
+
+    <div class="service-box">
+        <h3>🍲 Tajine</h3>
+        <p>
+            Tajine är en av Marockos mest ikoniska rätter. Den tillagas långsamt i en lergryta 
+            och kan innehålla kyckling, lamm, nötkött eller grönsaker. Kryddor som saffran, 
+            ingefära, kanel och citron ger en unik smak.
+        </p>
+    </div>
+
+    <div class="service-box">
+        <h3>🍛 Couscous</h3>
+        <p>
+            Couscous är Marockos nationalrätt. Den serveras traditionellt på fredagar och 
+            består av ångad semolina, grönsaker och kött eller kyckling. Ofta toppas den med 
+            karamelliserad lök och russin.
+        </p>
+    </div>
+
+    <div class="service-box">
+        <h3>🔥 Mechoui</h3>
+        <p>
+            Mechoui är långsamt grillat lamm, ofta tillagat i en jordugn eller över kol. 
+            Köttet blir extremt mört och kryddas vanligtvis med kummin och salt.
+        </p>
+    </div>
+
+    <div class="service-box">
+        <h3>🥣 Lkorain (Harira)</h3>
+        <p>
+            Lkorain, även kallad Harira, är en traditionell marockansk soppa gjord på tomat, 
+            linser, kikärtor och koriander. Den äts ofta under Ramadan men är populär året runt.
+        </p>
+    </div>
+
+    <a href="contact.html" class="cta">Beställ marockansk catering</a>
+
+</section>
+
+<!-- ⭐ JAVASCRIPT -->
+<script src="lightbox.js"></script>
+
+</body>
+</html>

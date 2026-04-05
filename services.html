@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tjänster – Said Q Ronfli</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ⭐ GLOBAL MENY -->
+<div id="menu-container"></div>
+<script>
+fetch("menu.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("menu-container").innerHTML = data;
+  });
+</script>
+<!-- ⭐ SLUT GLOBAL MENY -->
+
+<h2 class="center">Tjänster</h2>
+
+<section class="services-page">
+
+    <div class="service-box">
+        <h3>Zellij & mosaik</h3>
+        <p>Traditionellt marockanskt mosaikarbete med högsta precision och kvalitet.</p>
+    </div>
+
+    <div class="service-box">
+        <h3>Tadelakt</h3>
+        <p>Äkta marockansk tadelakt – perfekt för badrum, väggar och exklusiva ytor.</p>
+    </div>
+
+    <div class="service-box">
+        <h3>Murararbete</h3>
+        <p>Professionellt murararbete för renovering, nybyggnation och specialprojekt.</p>
+    </div>
+
+    <a href="contact.html" class="cta">Begär offert</a>
+
+</section>
+
+<!-- ⭐ JAVASCRIPT -->
+<script src="lightbox.js"></script>
+
+</body>
+</html>

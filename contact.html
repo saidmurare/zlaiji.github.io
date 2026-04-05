@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt – Said Q Ronfli</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ⭐ GLOBAL MENY -->
+<div id="menu-container"></div>
+<script>
+fetch("menu.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("menu-container").innerHTML = data;
+  });
+</script>
+<!-- ⭐ SLUT GLOBAL MENY -->
+
+<h2 class="center">Kontakta mig</h2>
+
+<form name="contact" method="POST" data-netlify="true" action="/success.html" class="contact-form">
+    <input type="hidden" name="form-name" value="contact">
+
+    <div class="input-group icon">
+        <span>👤</span>
+        <input type="text" name="name" placeholder="Ditt namn" required>
+    </div>
+
+    <div class="input-group icon">
+        <span>✉️</span>
+        <input type="email" name="email" placeholder="Din e‑post" required>
+    </div>
+
+    <div class="input-group icon">
+        <span>💬</span>
+        <textarea name="message" placeholder="Ditt meddelande..." required></textarea>
+    </div>
+
+    <button type="submit" class="send-btn">📨 Skicka meddelande</button>
+
+    <a href="https://wa.me/46764516379?text=Hej%20Said,%20jag%20vill%20ha%20mer%20information." 
+       class="whatsapp-btn">💚 WhatsApp</a>
+</form>
+
+<!-- ⭐ JAVASCRIPT -->
+<script src="lightbox.js"></script>
+
+</body>
+</html>
